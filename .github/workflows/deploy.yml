@@ -1,0 +1,19 @@
+name: CD — Deploy Spring Boot
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy a Render
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: 🚧 Deploy (pendiente Fase CD)
+        run: echo "Deploy se configurará en la Fase CD"
