@@ -33,6 +33,9 @@ jobs:
           java-version: '25'
           distribution: 'temurin'
           cache: maven
+      # ← AGREGAR ESTE PASO
+      - name: 🔧 Dar permisos a mvnw
+        run: chmod +x mvnw
 
       - name: 🧪 Build y Tests
         run: ./mvnw verify --no-transfer-progress
